@@ -1,4 +1,5 @@
 export default function FileDisplay({ reset, file, audio }) {
+
   return (
     <main className="flex flex-1 flex-col gap-3 sm:gap-4 md:gap-5 p-4 text-center justify-center w-fit mx-auto max-w-full">
       <h1 className="font-black text-4xl sm:text-5xl md:text-6xl">
@@ -6,7 +7,7 @@ export default function FileDisplay({ reset, file, audio }) {
       </h1>
       <div className="flex item-center gap-2 mx-auto  flex-col text-left my-7">
         <h3 className="font-extrabold">Name</h3>
-        <p>{file.name}</p>
+        <p>{file ? file.name : `Custom file`}</p>
       </div>
       <div className="flex items-center justify-evenly gap-4">
         <button
@@ -15,8 +16,9 @@ export default function FileDisplay({ reset, file, audio }) {
         >
           Reset
         </button>
-        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150">
-          Transcribe
+        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150 font-medium">
+          <p>Transcribe</p>
+          <i className="fa-solid fa-earth-americas"></i>
         </button>
       </div>
     </main>
