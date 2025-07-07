@@ -4,6 +4,8 @@ import FileDisplay from "./components/filedisplay";
 import Result from "./components/result";
 import Loader from "./components/loader";
 import { useState, useEffect } from "react";
+import axios from "axios"
+
 
 
 function App() {
@@ -17,9 +19,6 @@ function App() {
     setAudio(null);
   }
 
-  useEffect(() => {
-    console.log(audio);
-  }, [audio]);
 
   const isAudioPresent = file || audio;
 
