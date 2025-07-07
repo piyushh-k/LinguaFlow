@@ -7,6 +7,9 @@ You can upload an audio file (or record your voice directly in English), get an 
 
 ---
 
+![preview](./preview/Screen Shot 2025-07-08 at 03.16.44.png)
+![preview](./preview/Screen Shot 2025-07-08 at 03.53.12.png)
+
 ## ✨ Features
 
 - **Record or Upload Audio:** Record your voice (in English) or upload an audio file (`.mp3`, `.wav`).
