@@ -16,7 +16,7 @@ export default function FileDisplay({ reset, file, audio }) {
         >
           Reset
         </button>
-        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150 font-medium">
+        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150 font-medium" >
           <p>Transcribe</p>
           <i className="fa-solid fa-earth-americas"></i>
         </button>

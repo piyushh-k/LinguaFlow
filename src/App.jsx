@@ -4,7 +4,6 @@ import FileDisplay from "./components/filedisplay";
 import Result from "./components/result";
 import Loader from "./components/loader";
 import { useState, useEffect } from "react";
-import axios from "axios"
 
 
 
@@ -20,6 +19,7 @@ function App() {
   }
 
 
+
   const isAudioPresent = file || audio;
 
   return (
@@ -28,7 +28,7 @@ function App() {
         <Header />
         {output ? <Result /> : 
         loading ? <Loader isLoading = {loading}/> : 
-        isAudioPresent ? <FileDisplay file={file} audio={audio} reset={handleResetAudio} /> :  <Homepage setFile={setFile} setAudio={setAudio} />
+        isAudioPresent ? <FileDisplay file={file} audio={audio} onClick={sendBlob} reset={handleResetAudio} /> :  <Homepage setFile={setFile} setAudio={setAudio} />
         }
       </section>
 
