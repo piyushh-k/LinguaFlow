@@ -1,6 +1,8 @@
 import { useState } from "react";
+import Transcription from "./transcription";
+import Translation from "./translation";
 
-export default function Translated() {
+export default function Result() {
   const [tab , setTab] = useState(true)
   return (
     <main className="flex flex-1 flex-col gap-3 sm:gap-4 md:gap-5 p-4 text-center justify-center w-fit mx-auto max-w-full">
@@ -12,6 +14,7 @@ export default function Translated() {
         } disabled={tab}>Transcription</button>
         <button className={`px-4 py-1 font-semibold duration-300 ${tab ? " text-pink-400" : "bg-pink-400 text-white"}`} onClick={() => setTab(!tab)} disabled={!tab}>Translation</button>
       </div>
+      {tab ? <Transcription /> : <Translation />}
     </main>
   );
 }
