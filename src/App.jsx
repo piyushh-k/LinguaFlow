@@ -1,6 +1,6 @@
 import Homepage from "./components/homepage";
 import Header from "./components/header";
-import FileDisplay from "./components/filedisplay";
+import Display from "./components/display";
 import Result from "./components/result";
 import Loader from "./components/loader";
 import { useState, useEffect, useRef } from "react";
@@ -9,7 +9,7 @@ import { MessageTypes } from "./presets";
 function App() {
   const [file, setFile] = useState(null);
   const [audio, setAudio] = useState(null);
-  const [output, setOutput] = useState(null);
+  const [output, setOutput] = useState(2);
   const [loading, setLoading] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [finished, setFinished] = useState(false);
@@ -85,7 +85,7 @@ function App() {
         ) : loading ? (
           <Loader isLoading={loading} />
         ) : isAudioPresent ? (
-          <FileDisplay file={file} audio={audio} reset={handleResetAudio} />
+          <Display file={file} audio={audio} reset={handleResetAudio} />
         ) : (
           <Homepage setFile={setFile} setAudio={setAudio} />
         )}

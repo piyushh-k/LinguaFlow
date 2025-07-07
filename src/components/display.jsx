@@ -1,13 +1,13 @@
-export default function FileDisplay({ reset, file, audio }) {
+export default function Display({ reset, file, audio }) {
 
   return (
     <main className="flex flex-1 flex-col gap-3 sm:gap-4 md:gap-5 p-4 text-center justify-center w-fit mx-auto max-w-full">
       <h1 className="font-black text-4xl sm:text-5xl md:text-6xl">
-        Your<span className="text-pink-700 "> File</span>
+        Your <span className="text-pink-700 "> File</span>
       </h1>
       <div className="flex item-center gap-2 mx-auto  flex-col text-left my-7">
-        <h3 className="font-extrabold">Name</h3>
-        <p>{file ? file.name : `Custom file`}</p>
+        <h3 className="font-extrabold">File: </h3>
+        <p>{file ? file.name : `Your Recorded file`}</p>
       </div>
       <div className="flex items-center justify-evenly gap-4">
         <button

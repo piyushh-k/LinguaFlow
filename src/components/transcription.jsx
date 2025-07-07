@@ -1,3 +1,3 @@
 export default function Transcription() {
-  return <div>Transcription</div>;
+  return <div>Mic testing 1 2 3!</div>;
 }
