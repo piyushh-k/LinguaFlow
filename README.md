@@ -73,7 +73,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📄 License
 
-No license. All rights
+No license. All rights reserved.
 
 ---
 
