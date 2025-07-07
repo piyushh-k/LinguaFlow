@@ -87,4 +87,3 @@ No license. All rights reserved.
 ---
 
 
-Made with ❤️ by Piyush Kochar
