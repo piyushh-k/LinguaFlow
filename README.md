@@ -7,8 +7,8 @@ You can upload an audio file (or record your voice directly in English), get an 
 
 ---
 
-![preview](./preview/Screen Shot 2025-07-08 at 03.16.44.png)
-![preview](./preview/Screen Shot 2025-07-08 at 03.53.12.png)
+![preview](https://github.com/piyushh-k/LinguaFlow/blob/0d7705e04e9cda36326d6582263c239823945db1/preview/Screen%20Shot%202025-07-08%20at%2003.16.44.png)
+![preview](https://github.com/piyushh-k/LinguaFlow/blob/0d7705e04e9cda36326d6582263c239823945db1/preview/Screen%20Shot%202025-07-08%20at%2003.16.44.png)
 
 ## ✨ Features
 
