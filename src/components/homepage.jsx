@@ -4,14 +4,11 @@ export default function Homepage({ setFile, setAudio }) {
     const [isRecording , setIsRecording] = useState(false);
     const [audioChunks, setAudioChunks] = useState([]);
     const [voiceDuration, setVoiceDuration] = useState(0);
-
     const mediaRecorder = useRef(null);
-    const mimeType = 'audio/webm';
 
     async function startRecording() {
         let stream;
         console.log('Start recording');
-
         try {
             stream = await navigator.mediaDevices.getUserMedia({
                 audio: true,
@@ -23,7 +20,7 @@ export default function Homepage({ setFile, setAudio }) {
         }
         setIsRecording(true)
 
-        const media = new MediaRecorder(stream, { type: mimeType })
+        const media = new MediaRecorder(stream, { type: 'audio/webm' })
         mediaRecorder.current = media
 
         mediaRecorder.current.start()
@@ -42,7 +39,7 @@ export default function Homepage({ setFile, setAudio }) {
 
         mediaRecorder.current.stop()
         mediaRecorder.current.onstop = () => {
-            const newBlob = new Blob(audioChunks, { type: mimeType })
+            const newBlob = new Blob(audioChunks, { type: 'audio/webm' })
             setAudio(newBlob)
             setAudioChunks([])
             setVoiceDuration(0)
