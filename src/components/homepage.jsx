@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-
-export default function Homepage({ setFile, setAudio }) {
+import {ScaleLoader} from 'react-spinners'
+export default function Homepage({ setFile, setAudio}) {
     const [isRecording , setIsRecording] = useState(false);
     const [audioChunks, setAudioChunks] = useState([]);
     const [voiceDuration, setVoiceDuration] = useState(0);
@@ -52,6 +52,8 @@ export default function Homepage({ setFile, setAudio }) {
         const interval = setInterval(() => {
             setVoiceDuration(v => v + 1);
         }, 1000)
+        
+
 
         return () => clearInterval(interval)
     },[isRecording])

@@ -5,7 +5,7 @@ import Result from "./components/result";
 import Loader from "./components/loader";
 import { useState, useEffect, useRef } from "react";
 import { MessageTypes } from "./presets";
-import {pipeline} from '@huggingface/transformers'
+
 
 
 function App() {
@@ -20,11 +20,22 @@ function App() {
     setAudio(null);
   }
 
-  useEffect(() => {
+
+  //temporary useEffect to check the audio stream quality 
+useEffect(() => {
+  if (audio) {
     console.log("audio fetched");
     console.log(audio);
 
-  }, [audio]);
+    const audioURL = URL.createObjectURL(audio);
+    const audioElement = new Audio(audioURL);
+
+
+    audioElement.playbackRate = 3; 
+    audioElement.play();
+  }
+}, [audio]); 
+
 
   const isAudioPresent = file || audio;
 
