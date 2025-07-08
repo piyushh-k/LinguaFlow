@@ -21,39 +21,6 @@ function App() {
 
   const worker = useRef(null);
 
-  useEffect(() => {
-    worker.current ??= new Worker(
-      new URL("./workers/whisper.js", import.meta.url),
-      {
-        type: "module",
-      }
-    );
-    const onMessageReceived = (e) => {
-      switch (e.data.type) {
-        case "LOADING":
-          setLoading(true);
-          console.log("LOADING");
-          break;
-
-        case "DOWNLOADING":
-          setDownloading(true);
-          console.log("DOWNLOADING");
-          break;
-
-        case "RESULT":
-          setOutput(e.data.results);
-          console.log(e.data.results);
-          break;
-        case "INFERENCE_DONE":
-          setFinished(true);
-          console.log("DONE");
-          break;
-      }
-    };
-    worker.current.addEventListener("message", onMessageReceived);
-    return () =>
-      worker.current.removeEventListener("message", onMessageReceived);
-  });
 
   async function readAudio(file) {
     const audioCTX = new AudioContext({ sampleRate: 16000 });
