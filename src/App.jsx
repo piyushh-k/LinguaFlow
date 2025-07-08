@@ -58,7 +58,7 @@ useEffect(() => {
         <Header />
         {(() => {
           if (output) {
-            return <Result />;
+            return <Result  />;
           }
 
           if (loading) {
@@ -67,7 +67,7 @@ useEffect(() => {
 
           if (isAudioPresent) {
             return (
-              <Display file={file} audio={audio} reset={handleResetAudio} />
+              <Display file={file} audio={audio} reset={handleResetAudio} setoutput={setOutput} setloading = {setLoading}/>
             );
           }
 

@@ -1,4 +1,4 @@
-export default function Display({ reset, file, audio }) {
+export default function Display({ reset, file, audio , setoutput , setloading}) {
 
   return (
     <main className="flex flex-1 flex-col gap-3 sm:gap-4 md:gap-5 p-4 text-center justify-center w-fit mx-auto max-w-full">
@@ -16,7 +16,12 @@ export default function Display({ reset, file, audio }) {
         >
           Reset
         </button>
-        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150 font-medium" >
+        <button className="specialBtn px-4 py-3 rounded-2xl text-pink-500 hover:text-pink-800 duration-150 font-medium" onClick={async () => {
+          setloading(true);
+          await new Promise((resolve , reject) => {setTimeout(resolve , 3000)});
+          setloading(false);
+          setoutput(true);
+        }}>
           <p>Transcribe</p>
           <i className="fa-solid fa-earth-americas"></i>
         </button>
