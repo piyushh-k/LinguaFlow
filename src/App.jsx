@@ -11,14 +11,18 @@ function App() {
   const [audio, setAudio] = useState(null);
   const [output, setOutput] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [downloading, setDownloading] = useState(false);
-  const [finished, setFinished] = useState(false);
+
+
 
   function handleResetAudio() {
     setFile(null);
     setAudio(null);
   }
 
+  useEffect(() => {
+    console.log("audio fetched")
+    console.log(audio);
+  }, [audio])
 
 
   const isAudioPresent = file || audio;
