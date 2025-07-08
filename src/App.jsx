@@ -80,23 +80,21 @@ function App() {
     <div className="flex flex-col max-w-[1000] mx-auto w-full">
       <section className="min-h-screen flex flex-col">
         <Header />
-        {(() => {
-          if (output) {
-            return <Result />;
-          }
+       {(() => {
+  if (output) {
+    return <Result />;
+  }
 
-          if (loading) {
-            return <Loader isLoading={loading} />;
-          }
+  if (loading) {
+    return <Loader isLoading={loading} />;
+  }
 
-          if (isAudioPresent) {
-            return (
-              <Display file={file} audio={audio} reset={handleResetAudio} />
-            );
-          }
+  if (isAudioPresent) {
+    return <Display file={file} audio={audio} reset={handleResetAudio} />;
+  }
 
-          return <Homepage setFile={setFile} setAudio={setAudio} />;
-        })()}
+  return <Homepage setFile={setFile} setAudio={setAudio} />;
+})()}
       </section>
 
       <footer></footer>

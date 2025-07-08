@@ -8,7 +8,7 @@ You can upload an audio file (or record your voice directly in English), get an 
 ---
 
 ![preview](https://github.com/piyushh-k/LinguaFlow/blob/0d7705e04e9cda36326d6582263c239823945db1/preview/Screen%20Shot%202025-07-08%20at%2003.16.44.png)
-![preview](https://github.com/piyushh-k/LinguaFlow/blob/0d7705e04e9cda36326d6582263c239823945db1/preview/Screen%20Shot%202025-07-08%20at%2003.16.44.png)
+![preview](https://github.com/piyushh-k/LinguaFlow/blob/3cb6121477169fe308809f338f18b89300d67e80/preview/Screen%20Shot%202025-07-08%20at%2003.53.12.png)
 
 ## ✨ Features
 
@@ -73,7 +73,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📄 License
 
-No license. All rights
+No license. All rights reserved.
 
 ---
 
@@ -87,4 +87,3 @@ No license. All rights
 ---
 
 
-Made with ❤️ by Piyush Kochar
