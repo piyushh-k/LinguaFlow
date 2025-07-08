@@ -19,27 +19,7 @@ function App() {
     setAudio(null);
   }
 
-  const worker = useRef(null);
 
-
-  async function readAudio(file) {
-    const audioCTX = new AudioContext({ sampleRate: 16000 });
-    const response = await file.arrayBuffer();
-    const decoded = await audioCTX.decodeAudioData(response);
-    const audio = decoded.getChannelData(0);
-    return audio;
-  }
-
-  async function handleSubmit() {
-    if (!file && !audio) return;
-
-    let voice = await readAudio(file ? file : audio);
-    const model_name = "openAI/whisper-tiny.en";
-
-    worker.current.postMessage({
-      type: MessageTypes.INFERENCE_REQUEST,
-    });
-  }
 
   const isAudioPresent = file || audio;
 
