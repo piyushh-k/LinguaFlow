@@ -31,10 +31,19 @@ useEffect(() => {
     const audioElement = new Audio(audioURL);
 
 
-    audioElement.playbackRate = 3; 
+    audioElement.playbackRate = 1; 
     audioElement.play();
   }
-}, [audio]); 
+  if(file){
+    console.log("file fetched");
+    console.log(file.name);
+
+    const fileURL = URL.createObjectURL(file);
+    const fileElement = new Audio(fileURL);
+
+    fileElement.play();
+  } else return;
+}, [audio , file]); 
 
 
   const isAudioPresent = file || audio;
