@@ -1,3 +1,9 @@
-export default function Transcription() {
-  return <div>Mic testing 1 2 3!</div>;
+export default function Transcription({result}) {
+  let transcription;
+  if(!result){
+    transcription = '';
+  } else{
+    transcription = result[0].text
+  }
+  return <div>{transcription}</div>;
 }

@@ -91,7 +91,7 @@ export default function Homepage({ setFile, setAudio}) {
             <input
               className="hidden"
               type="file"
-              accept=".mp3,.wave"
+              accept=".mp3,.wav"
               onChange={(e) => {
                 const temp = e.target.files[0];
                 setFile(temp);
