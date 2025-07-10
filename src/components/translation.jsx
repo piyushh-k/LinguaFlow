@@ -1,3 +1,3 @@
 export default function Translation() {
-  return <div>Translation</div>;
+  return <div>🚧Under Development! Will be implemented soon.🚧</div>;
 }
