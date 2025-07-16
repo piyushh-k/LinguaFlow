@@ -10,6 +10,8 @@ You can upload an audio file (or record your voice directly in English), get an 
 ![preview](https://github.com/piyushh-k/LinguaFlow/blob/0d7705e04e9cda36326d6582263c239823945db1/preview/Screen%20Shot%202025-07-08%20at%2003.16.44.png)
 ![preview](https://github.com/piyushh-k/LinguaFlow/blob/3cb6121477169fe308809f338f18b89300d67e80/preview/Screen%20Shot%202025-07-08%20at%2003.53.12.png)
 
+Deployed at : https://lingua-flow-8667.vercel.app/
+
 ## ✨ Features
 
 - **Record or Upload Audio:** Record your voice (in English) or upload an audio file (`.mp3`, `.wav`).
